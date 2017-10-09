@@ -35,22 +35,9 @@ ssh-add ~/.ssh/id_rsa
 (password)
 
 Goto your account
-(clip < ~/.ssh/id_rsa.pub)
+(clip < ~/.ssh/id_rsa.pub) {{-- for windows only --}}
 
-
-
-
-…or create a new repository on the command line
-
-echo "# laratrust" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/larigyn/laratrust.git
-git push -u origin master
-
-
-…or push an existing repository from the command line
-
-git remote add origin https://github.com/larigyn/laratrust.git
-git push -u origin master
+{{-- pushing another repo --}}
+git remote -v {{-- check first --}}
+git remote rm origin
+git remote add origin (your repo)
